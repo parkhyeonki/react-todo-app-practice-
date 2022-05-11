@@ -1,6 +1,6 @@
 import React from 'react';
 import './TodoInsert.scss';
-import { AiOutlinePlus } from 'react-icons/ai';
+import { AiOutlinePlus } from 'react-icons/fa';
 const TodoInsert = () => {
   return (
     <form className="TodoInsert">

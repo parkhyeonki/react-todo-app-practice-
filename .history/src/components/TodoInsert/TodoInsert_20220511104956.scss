@@ -1,0 +1,23 @@
+.TodoInsert {
+  display: flex;
+  height: 2rem;
+  background-color: white;
+
+  .TodoInput {
+    flex: 1 1 90%;
+    border: 0;
+    background: none;
+  }
+  .TodoBtn {
+    flex: 1 1 10%;
+    background-color: lightgray;
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 320ms ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

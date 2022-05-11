@@ -1,6 +1,6 @@
 import React from 'react';
 import './TodoInsert.scss';
-import { AiOutlinePlus } from 'react-icons/ai';
+
 const TodoInsert = () => {
   return (
     <form className="TodoInsert">
@@ -9,9 +9,7 @@ const TodoInsert = () => {
         className="TodoInput"
         placeholder="Please enter what you need to do"
       />
-      <button className="TodoBtn" type="submit">
-        <AiOutlinePlus />
-      </button>
+      <button className="TodoBtn" type="submit"></button>
     </form>
   );
 };

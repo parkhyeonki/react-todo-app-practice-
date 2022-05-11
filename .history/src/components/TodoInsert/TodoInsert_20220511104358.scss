@@ -1,0 +1,15 @@
+.TodoInsert {
+  display: flex;
+  height: 1rem;
+
+  .TodoInput {
+    flex: 1 1 90%;
+    background-color: white;
+    border: 0;
+  }
+  .TodoBtn {
+    flex: 1 1 10%;
+    background-color: lightgray;
+    border: 0;
+  }
+}

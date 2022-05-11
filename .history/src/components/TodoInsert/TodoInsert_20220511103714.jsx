@@ -1,6 +1,6 @@
 import React from 'react';
 import './TodoInsert.scss';
-import { AiOutlinePlus } from 'react-icons/ai';
+import { Myadd } from 'react-icons/md';
 const TodoInsert = () => {
   return (
     <form className="TodoInsert">
@@ -10,7 +10,7 @@ const TodoInsert = () => {
         placeholder="Please enter what you need to do"
       />
       <button className="TodoBtn" type="submit">
-        <AiOutlinePlus />
+        <Myadd />
       </button>
     </form>
   );

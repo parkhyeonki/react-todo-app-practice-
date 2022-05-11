@@ -1,0 +1,11 @@
+.TodoInsert {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  .TodoInput {
+    flex: 1 1 90%;
+  }
+  .TodoBtn {
+    flex: 1 1 10%;
+  }
+}
