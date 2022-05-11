@@ -5,7 +5,7 @@ import TodoTemplate from './components/TodoTemplate/TodoTemplate';
 function App() {
   return (
     <>
-      <TodoTemplate>todo</TodoTemplate>
+      <TodoTemplate />
     </>
   );
 }
