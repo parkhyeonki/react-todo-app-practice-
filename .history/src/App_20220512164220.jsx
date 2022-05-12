@@ -64,7 +64,7 @@ function App() {
     <>
       <TodoTemplate>
         <TodoInsert addTodo={addTodo} />
-        <TodoList todos={todos} removeTodo={removeTodo} onToggle={onToggle} />
+        <TodoList todos={todos} removeTodo={removeTodo} />
       </TodoTemplate>
     </>
   );
