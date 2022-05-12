@@ -1,0 +1,12 @@
+.TodoListItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  &:nth-child(even) {
+    background: #f8f9fa;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,8 @@
+.TodoListItem {
+  display: flex;
+  align-items: center;
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+}

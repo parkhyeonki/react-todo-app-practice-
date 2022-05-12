@@ -4,7 +4,7 @@ import './TodoList.scss';
 
 const TodoList = () => {
   return (
-    <div className="TodoList">
+    <div>
       <TodoListItem />
       <TodoListItem />
       <TodoListItem />
