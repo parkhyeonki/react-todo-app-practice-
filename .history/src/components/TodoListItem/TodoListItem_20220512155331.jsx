@@ -9,11 +9,15 @@ import './TodoListItem.scss';
 import cn from 'classnames';
 
 const TodoListItem = ({ todo }) => {
-  const { text, checked } = todo;
+  const [text, checked] = todo;
   return (
     <div className="TodoListItem">
       <div className={cn('checkbox', { checked })}>
-        {checked ? <MdOutlineCheckBox /> : <MdOutlineCheckBoxOutlineBlank />}
+        {todo.checked ? (
+          <MdOutlineCheckBox />
+        ) : (
+          <MdOutlineCheckBoxOutlineBlank />
+        )}
         <div className="text">{text}</div>
       </div>
       <div className="remove">
