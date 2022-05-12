@@ -12,7 +12,7 @@ const TodoListItem = ({ todo, removeTodo }) => {
   const { id, text, checked } = todo;
 
   const onClickItem = () => {
-    removeTodo(id);
+    removeTodo(todo.id);
   };
   return (
     <div className="TodoListItem">

@@ -9,11 +9,9 @@ import './TodoListItem.scss';
 import cn from 'classnames';
 
 const TodoListItem = ({ todo, removeTodo }) => {
-  const { id, text, checked } = todo;
+  const { text, checked } = todo;
 
-  const onClickItem = () => {
-    removeTodo(id);
-  };
+  const onClickItem = () => {};
   return (
     <div className="TodoListItem">
       <div className={cn('checkbox', { checked })}>

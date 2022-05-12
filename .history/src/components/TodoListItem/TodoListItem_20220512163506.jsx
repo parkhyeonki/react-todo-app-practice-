@@ -9,10 +9,10 @@ import './TodoListItem.scss';
 import cn from 'classnames';
 
 const TodoListItem = ({ todo, removeTodo }) => {
-  const { id, text, checked } = todo;
+  const { text, checked } = todo;
 
   const onClickItem = () => {
-    removeTodo(id);
+    removeTodo();
   };
   return (
     <div className="TodoListItem">

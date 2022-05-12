@@ -42,12 +42,9 @@ function App() {
     [todos],
   );
 
-  const removeTodo = useCallback(
-    (id) => {
-      setTodos(todos.filter((todo) => id !== todo.id));
-    },
-    [todos],
-  );
+  const removeTodo = (todo) => {
+    console.log(todo);
+  };
   return (
     <>
       <TodoTemplate>
