@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import TodoTemplate from './components/TodoTemplate/TodoTemplate';
 import TodoInsert from './components/TodoInsert/TodoInsert';
@@ -23,24 +23,9 @@ function App() {
     },
   ]);
 
-  const nextId = useRef(4);
-
-  useEffect(() => {
-    console.log('Mount');
-  }, []);
-
-  const addTodo = useCallback(
-    (inputText) => {
-      const todo = {
-        id: nextId,
-        text: inputText,
-        checked: false,
-      };
-      setTodos(todos.concat(todo));
-      nextId.current += 1;
-    },
-    [todos],
-  );
+  const addTodo = (inputText) => {
+    console.log(inputText);
+  };
   return (
     <>
       <TodoTemplate>

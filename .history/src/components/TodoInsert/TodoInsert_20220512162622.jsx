@@ -3,16 +3,15 @@ import './TodoInsert.scss';
 import { AiOutlinePlus } from 'react-icons/ai';
 const TodoInsert = ({ addTodo }) => {
   const [inputText, setInputText] = useState('');
-  const onClickTodo = useCallback(
-    (event) => {
-      addTodo(inputText);
-      event.preventDefault();
+  const onClickTodo = (event) => {
+    addTodo(inputText);
+  };
+  const inputOnChange = useCallback(
+    (e) => {
+      setInputText(e.target.value);
     },
-    [addTodo, inputText],
+    [inputText],
   );
-  const inputOnChange = useCallback((e) => {
-    setInputText(e.target.value);
-  }, []);
   return (
     <form className="TodoInsert" onSubmit={onClickTodo}>
       <input
