@@ -39,13 +39,16 @@ function App() {
     setTodos((todos) => todos.filter((todo) => id !== todo.id));
   }, []);
 
-  const onToggle = useCallback((id) => {
-    setTodos((todos) =>
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, checked: !todo.checked } : todo,
-      ),
-    );
-  }, []);
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(
+        todos.map((todo) =>
+          todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+        ),
+      );
+    },
+    [todos],
+  );
 
   return (
     <>
