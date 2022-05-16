@@ -1,10 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-  useRef,
-  useCallback,
-  useReducer,
-} from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import './App.css';
 import TodoTemplate from './components/TodoTemplate/TodoTemplate';
 import TodoInsert from './components/TodoInsert/TodoInsert';
@@ -38,7 +32,7 @@ function todoReducer(todos, action) {
 }
 
 function App() {
-  const [todos, dispatch] = useReducer(todoReducer, undefined, createBulkTodo);
+  const [todos, setTodos] = useState(createBulkTodo);
 
   const nextId = useRef(2501);
 
@@ -52,16 +46,20 @@ function App() {
       text: inputText,
       checked: false,
     };
-    dispatch({ type: 'INSERT', todo });
+    setTodos((todos) => todos.concat(todo));
     nextId.current += 1;
   }, []);
 
   const removeTodo = useCallback((id) => {
-    dispatch({ type: 'REMOVE', id });
+    setTodos((todos) => todos.filter((todo) => id !== todo.id));
   }, []);
 
   const onToggle = useCallback((id) => {
-    dispatch({ type: 'TOGGLE', id });
+    setTodos((todos) =>
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+      ),
+    );
   }, []);
 
   return (

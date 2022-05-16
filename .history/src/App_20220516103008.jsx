@@ -52,16 +52,20 @@ function App() {
       text: inputText,
       checked: false,
     };
-    dispatch({ type: 'INSERT', todo });
+    setTodos((todos) => todos.concat(todo));
     nextId.current += 1;
   }, []);
 
   const removeTodo = useCallback((id) => {
-    dispatch({ type: 'REMOVE', id });
+    setTodos((todos) => todos.filter((todo) => id !== todo.id));
   }, []);
 
   const onToggle = useCallback((id) => {
-    dispatch({ type: 'TOGGLE', id });
+    setTodos((todos) =>
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+      ),
+    );
   }, []);
 
   return (

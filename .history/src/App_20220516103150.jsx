@@ -52,16 +52,16 @@ function App() {
       text: inputText,
       checked: false,
     };
-    dispatch({ type: 'INSERT', todo });
+    dispatch({type:"INSERT", todo}));
     nextId.current += 1;
   }, []);
 
   const removeTodo = useCallback((id) => {
-    dispatch({ type: 'REMOVE', id });
+    dispatch({type:"REMOVE", id});
   }, []);
 
   const onToggle = useCallback((id) => {
-    dispatch({ type: 'TOGGLE', id });
+    dispatch({type:"TOGGLE", id})
   }, []);
 
   return (
